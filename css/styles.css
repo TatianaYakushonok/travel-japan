@@ -1,4 +1,45 @@
+@import url("reset.css");
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+/* lato-regular - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lato-v22-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/lato-v22-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/lato-v22-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/lato-v22-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/lato-v22-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/lato-v22-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
+  }
+  /* lato-700 - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/lato-v22-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/lato-v22-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/lato-v22-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/lato-v22-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/lato-v22-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/lato-v22-latin-700.svg#Lato') format('svg'); /* Legacy iOS */
+  }
+  /* lato-900 - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/lato-v22-latin-900.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/lato-v22-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/lato-v22-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/lato-v22-latin-900.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/lato-v22-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/lato-v22-latin-900.svg#Lato') format('svg'); /* Legacy iOS */
+  }
 
 html {
     box-sizing: border-box;
@@ -8,4 +49,69 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lato';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #102746;
+}
+
+.wrapper {
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+/* -------------------------- HEADER ------------------------- */
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 56px;
+}
+
+.header_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header_item {
+    margin-right: 82px;
+}
+
+.header_item:last-child {
+    margin-right: 0;
+}
+
+.header_link {
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header_link:hover,
+.header_link:focus,
+.header_link:active {
+    opacity: .75;
+}
+
+/* -------------------------- SECTION INTRO ------------------------- */
+
+.intro {
+    height: 100vh;
+    background: url('../img/hero.jpg') no-repeat center;
+    background-size: cover;
 }
