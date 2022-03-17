@@ -111,7 +111,65 @@ body {
 /* -------------------------- SECTION INTRO ------------------------- */
 
 .intro {
-    height: 100vh;
+    min-height: 100vh;
     background: url('../img/hero.jpg') no-repeat center;
     background-size: cover;
+    padding-top: 263px;
+}
+
+.intro_title {
+    max-width: 619px;
+    margin-bottom: 22px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    color: #fff;
+}
+
+.intro_subtitle {
+    max-width: 546px;
+    margin-bottom: 59px;
+    color: #fff;
+    line-height: 24px;
+}
+
+.search-form_info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-form_field {
+    width: 297px;
+    background: transparent url('../img/svg/Oval.svg') no-repeat left 6px;
+    background-size: 20px;
+    border: 0;
+    border-bottom: 2px solid #BFC0C5;
+    margin-right: 60px;
+    padding-left: 43px;
+    padding-bottom: 22px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+}
+
+.search-form_field::-webkit-input-placeholder {
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+}
+
+.search-form_submit {
+    padding: 15px 39px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+    background-color: #1B7DFF;
+    border: 0;
+}
+
+.search-form_submit:hover,
+.search-form_submit:focus,
+.search-form_submit:active {
+    background-color: rgb(4, 98, 221);
 }
