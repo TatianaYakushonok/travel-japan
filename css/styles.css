@@ -383,3 +383,54 @@ img {
     height: 100%;
     z-index: 4;
 }
+
+/* -------------------------- SECTION TOURS ------------------------- */
+
+.tours {
+    margin-bottom: 139px;
+}
+
+.tours_tour {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 108px;
+    align-items: center;
+    margin-bottom: 77px;
+}
+
+.tours_tour:nth-child(even) {
+    direction: rtl;
+}
+
+.tour_title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 85px;
+}
+
+.tour_info {
+    text-align: left;
+    padding-left: 47px;
+}
+
+.tour_desc {
+    line-height: 24px;
+    margin-bottom: 58px;
+}
+
+.tour_more {
+    display: inline-block;
+    padding-right: 59px;
+    line-height: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #006DFE;
+    background: url('../img/svg/arrow-right-ico.svg') no-repeat 95% center;
+    transition: .2s;
+}
+
+.tour_more:hover,
+.tour_more:focus {
+    background: url('../img/svg/arrow-right-ico.svg') no-repeat right center;
+}
