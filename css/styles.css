@@ -101,6 +101,13 @@ img {
     position: fixed;
     top: 0;
     left: 0;
+    transition: .2s linear;
+    padding-bottom: 50px;
+    z-index: 999;
+}
+
+.header_active {
+    background: #0E1D28;
 }
 
 .header_wrapper {
@@ -519,4 +526,75 @@ img {
 .top_card-more:focus,
 .top_card-more:active {
     background-color: rgb(4, 98, 221);
+}
+
+/* -------------------------- SECTION VIDEOS ------------------------- */
+
+.videos {
+    width: 100%;
+}
+
+.videos_wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.video_item {
+    padding-top: 56.25%;
+}
+
+.video_element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* -------------------------- SECTION FOOTER ------------------------- */
+
+.footer {
+    background: #0E1D28;
+    padding: 119px 0;
+}
+
+.footer_item {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.footer_logo {
+    width: 50%;
+}
+
+.footer_logo-pic {
+    width: 170px;
+    height: 64px;
+}
+
+.footer_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.footer_menu-title {
+    padding: 5px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer_menu-link {
+    padding: 3px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer_menu-link:hover,
+.footer_menu-link:focus,
+.footer_menu-link:active {
+    opacity: .75;
 }
