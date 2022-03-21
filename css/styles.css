@@ -1,0 +1,980 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+/* lato-regular - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lato-v22-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/lato-v22-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/lato-v22-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/lato-v22-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/lato-v22-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/lato-v22-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
+  }
+  /* lato-700 - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/lato-v22-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/lato-v22-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/lato-v22-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/lato-v22-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/lato-v22-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/lato-v22-latin-700.svg#Lato') format('svg'); /* Legacy iOS */
+  }
+  /* lato-900 - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/lato-v22-latin-900.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/lato-v22-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/lato-v22-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/lato-v22-latin-900.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/lato-v22-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/lato-v22-latin-900.svg#Lato') format('svg'); /* Legacy iOS */
+  }
+
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lato';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #102746;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.wrapper-full {
+    max-width: 1262px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    display: block;
+    content: '';
+    width: 253px;
+    height: 3px;
+    background: rgba(0, 109, 254, 1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* -------------------------- HEADER ------------------------- */
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-transition: .2s linear;
+    -o-transition: .2s linear;
+    transition: .2s linear;
+    padding-bottom: 50px;
+    z-index: 999;
+}
+
+.header_active {
+    background: #0E1D28;
+}
+
+.header_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 56px;
+}
+
+.header_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.header_item {
+    margin-right: 82px;
+}
+
+.header_item:last-child {
+    margin-right: 0;
+}
+
+.header_link {
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header_link:hover,
+.header_link:focus,
+.header_link:active {
+    opacity: .75;
+}
+
+.header_burger {
+    display: none;
+    width: 40px;
+    height: 28px;
+    position: relative;
+}
+
+.burger_line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    background: #fff;
+}
+
+.burger_line-first {
+    top: 0;
+}
+
+.burger_line-second {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+.burger_line-third {
+    bottom: 0;
+}
+
+/* -------------------------- SECTION INTRO ------------------------- */
+
+.intro {
+    min-height: 100vh;
+    background: url('../img/hero-min.jpg') no-repeat center;
+    background-size: cover;
+    padding-top: 263px;
+    /*padding-bottom: 223px;*/
+    padding-bottom: 376px;
+}
+
+.intro_title {
+    max-width: 619px;
+    margin-bottom: 22px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    color: #fff;
+}
+
+.intro_subtitle {
+    max-width: 546px;
+    margin-bottom: 59px;
+    color: #fff;
+    line-height: 24px;
+}
+
+.search-form_info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.search-form_field {
+    width: 297px;
+    background: transparent url('../img/svg/Oval.svg') no-repeat left 6px;
+    background-size: 20px;
+    border: 0;
+    border-bottom: 2px solid #BFC0C5;
+    margin-right: 60px;
+    padding-left: 43px;
+    padding-bottom: 22px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+}
+
+.search-form_field::-webkit-input-placeholder {
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+}
+
+.search-form_submit {
+    padding: 15px 39px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+    background-color: #1B7DFF;
+    border: 0;
+}
+
+.search-form_submit:hover,
+.search-form_submit:focus,
+.search-form_submit:active {
+    background-color: rgb(4, 98, 221);
+}
+
+/* -------------------------- SECTION BENEFITS ------------------------- */
+
+.benefits {
+    margin-bottom: 131px;
+}
+
+.benefits_wrap {
+    max-width: 1262px;
+    background-color: #fff;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+            box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+    position: relative;
+}
+
+.benefits_title {
+    width: 100%;
+    padding: 93px 100px 88px 100px;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+    background-color: #fff;
+}
+
+.benefits_cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 55px 1fr 55px 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 55px;
+    padding: 0 100px;
+}
+
+.benefits_card {
+    margin-bottom: 112px;
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+}
+
+.benefits_card-pic {
+    max-width: 66px;
+    height: 66px;
+    margin-bottom: 37px;
+}
+
+.benefits_card-thumb {
+    display: block;
+}
+
+.benefits_card-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 26px;
+}
+
+.benefits_card-dec {
+    line-height: 24px;
+    margin-bottom: 39px;
+}
+
+.benefits_card-more {
+    display: inline-block;
+    padding-right: 59px;
+    line-height: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #006DFE;
+    background: url('../img/svg/arrow-right-ico.svg') no-repeat 95% center;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+.benefits_card-more:hover,
+.benefits_card-more:focus {
+    background: url('../img/svg/arrow-right-ico.svg') no-repeat right center;
+}
+
+/* -------------------------- SECTION PLACES ------------------------- */
+
+.places {
+    margin-bottom: 131px;
+}
+
+.places-caption {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+.places-title {
+    margin-right: 15px;
+}
+
+.places-view-all {
+    padding-right: 59px;
+    line-height: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #006DFE;
+    background: url('../img/svg/arrow-right-ico.svg') no-repeat right center;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+.places-view-all:hover,
+.places-view-all:focus {
+    opacity: .65;
+}
+
+.places-cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.places-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.places-card::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(21, 24, 36, 0.4); 
+}
+
+.places-card:hover  .places-card-pic {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+}
+
+.places-card-title {
+    font-size: 50px;
+    line-height: 60px;
+    color: #fff;
+    position: absolute;
+    bottom: 27px;
+    left: 29px;
+    z-index: 3;
+}
+
+.places-card-size-lg {
+    -ms-grid-column-span: 3;
+    grid-column: span 3;
+}
+
+.places-card-size-sm {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+}
+
+.places-card-pic {
+    width: 100%;
+    -webkit-transition: .15s;
+    -o-transition: .15s;
+    transition: .15s;
+}
+
+.places-card-pic-size-lg {
+    height: 354px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.places-card-pic-size-sm {
+    height: 283px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.places-card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+/* -------------------------- SECTION TOURS ------------------------- */
+
+.tours {
+    margin-bottom: 139px;
+}
+
+.tours_tour {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 108px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 108px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 77px;
+}
+
+.tours_tour:nth-child(even) {
+    direction: rtl;
+}
+
+.tour_title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 85px;
+}
+
+.tour_info {
+    text-align: left;
+    padding-left: 47px;
+}
+
+.tour_desc {
+    line-height: 24px;
+    margin-bottom: 58px;
+}
+
+.tour_more {
+    display: inline-block;
+    padding-right: 59px;
+    line-height: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #006DFE;
+    background: url('../img/svg/arrow-right-ico.svg') no-repeat 95% center;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+.tour_more:hover,
+.tour_more:focus {
+    background: url('../img/svg/arrow-right-ico.svg') no-repeat right center;
+}
+
+/* -------------------------- SECTION TOP ------------------------- */
+
+.top {
+    margin-bottom: 86px;
+}
+
+.top_title {
+    margin-bottom: 54px;
+}
+
+.top_cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 57px 1fr 57px 1fr 57px 1fr 57px 1fr 57px 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 57px;
+    grid-row-gap: 57px;
+}
+
+.top_card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+}
+
+.top_card-pic {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.top_card-thumb {
+    width: 100%;
+}
+
+.top_card-stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(21, 24, 36, 0.6);
+    padding: 16px 25px;
+}
+
+.top_card-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    margin: 0 auto 0 0;
+}
+
+.top_card-likes {
+    font-weight: 500;
+    line-height: 24px;
+    color: #fff;
+    padding-right: 20px;
+    background: url('../img/svg/heart-ico.svg') no-repeat right;
+    background-size: 16px;
+    margin-right: 14px;
+}
+
+.top_card-comments {
+    font-weight: 500;
+    line-height: 24px;
+    color: #fff;
+    padding-right: 23px;
+    background: url('../img/svg/comment-ico.svg') no-repeat right;
+    background-size: 14px;
+}
+
+.top_card-desc {
+    margin-bottom: 31px;
+}
+
+.top_card-more {
+    width: 118px;
+    padding: 12px 19px;
+    margin: auto 0 0 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    background: #006DFE;
+}
+
+.top_card-more:hover,
+.top_card-more:focus,
+.top_card-more:active {
+    background-color: rgb(4, 98, 221);
+}
+
+/* -------------------------- SECTION VIDEOS ------------------------- */
+
+.videos {
+    width: 100%;
+}
+
+.videos_wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.video_item {
+    padding-top: 56.25%;
+}
+
+.video_element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* -------------------------- SECTION FOOTER ------------------------- */
+
+.footer {
+    background: #0E1D28;
+    padding: 119px 0;
+}
+
+.footer_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; 
+}
+
+.footer_logo {
+    width: 50%;
+}
+
+.footer_logo-pic {
+    width: 170px;
+    height: 64px;
+}
+
+.footer_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 50%;
+}
+
+.footer_menu-title {
+    padding: 5px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer_menu-link {
+    padding: 3px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer_menu-link:hover,
+.footer_menu-link:focus,
+.footer_menu-link:active {
+    opacity: .75;
+}
+
+/* -------------------------- MEDIA ------------------------- */
+
+@media screen and (max-width: 768px) {
+    .header_burger {
+        display: block;
+    }
+
+    .header_nav {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 75px;
+        background: #0E1D28;
+        z-index: 10;
+        -webkit-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+                transform: translateX(100%);
+        -webkit-transition: .2s all linear;
+        -o-transition: .2s all linear;
+        transition: .2s all linear;
+    }
+
+    .header_nav-active {
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    .header_item {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 36px;
+    }
+
+    .header_item:last-child {
+        margin-bottom: 0;
+    }
+
+    .header_link {
+        font-size: 42px;
+        line-height: 48px;
+    }
+
+    .header_nav-close {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 20px;
+        right: 20px;
+        z-index: 11;
+    }
+
+    .header_nav-close-line {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+    }
+
+    .header_nav-close-line:first-child {
+        -webkit-transform: translateY(-50%) rotate(45deg);
+            -ms-transform: translateY(-50%) rotate(45deg);
+                transform: translateY(-50%) rotate(45deg);
+    }
+
+    .header_nav-close-line:last-child {
+        -webkit-transform: translateY(-50%) rotate(-45deg);
+            -ms-transform: translateY(-50%) rotate(-45deg);
+                transform: translateY(-50%) rotate(-45deg);
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .search-form_field {
+        margin-bottom: 25px;
+    }
+
+    .benefits {
+        margin-bottom: 75px;
+    }
+
+    .benefits_wrap {
+        -webkit-box-shadow: none;
+                box-shadow: none;
+    }
+
+    .benefits_title {
+        padding: 55px 15px;
+    }
+
+    .benefits_cards {
+        padding: 0 15px;
+        column-gap: 35px;
+    }
+
+    .benefits_card {
+        margin-bottom: 60px;
+    }
+
+    .places-card-size-lg,
+    .places-card-size-sm {
+        -ms-grid-column-span: 6;
+        grid-column: span 6;
+    }
+
+    .tours_tour {
+        grid-column-gap: 35px;
+    }
+
+    .tour_info {
+        padding-left: 0;
+    }
+
+    .tour_title {
+        margin-bottom: 35px;
+    }
+
+    .tour_desc {
+        margin-bottom: 15px;
+    }
+
+    .top_cards {
+        column-gap: 25px;
+        grid-row-gap: 55px;
+    } 
+
+    .top_card {
+        -ms-grid-column-span: 3;
+        grid-column: span 3;
+    }
+
+    .top_card-pic {
+        margin-bottom: 25px;
+    }
+
+    .footer {
+        padding: 60px 0;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+
+    .section-title {
+        margin-bottom: 25px;
+    }
+
+    .section-title::after {
+        width: 78px;
+    }
+
+    .header_wrapper {
+        padding-top: 25px;
+    }
+
+    .header_nav {
+        padding: 75px 30px;
+    }
+
+    .intro {
+        padding-top: 125px;
+    }
+
+    .intro_title {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .search-form_field {
+        width: 100%;
+        margin-right: 0;
+        padding-bottom: 12px;
+        background: transparent url('../img/svg/Oval.svg') no-repeat left 2px;
+    }
+
+    .search-form_field::-webkit-input-placeholder {
+        font-size: 16px;
+    }
+
+    .search-form_submit {
+        width: 100%;
+    }
+
+    .benefits {
+        margin-bottom: 36px;
+    }
+
+    .benefits_card {
+        -ms-grid-column-span: 3;
+        grid-column: span 3;
+        margin-bottom: 30px;
+    }
+
+    .benefits_card-pic {
+        margin-bottom: 20px;
+    }
+
+    .benefits_card-title {
+        margin-bottom: 12px;
+    }
+
+    .benefits_card-dec {
+        margin-bottom: 20px;
+    }
+
+    .places {
+        margin-bottom: 75px;
+    }
+
+    .places-card-pic-size-lg,
+    .places-card-pic-size-sm {
+        height: 238px;
+    }
+
+    .tours {
+        margin-bottom: 75px;
+    }
+
+    .tours_tour {
+        margin-bottom: 50px;
+    }
+
+    .tour_pic,
+    .tour_info {
+        -ms-grid-column-span: 2;
+        grid-column: span 2;
+    }
+
+    .tour_pic {
+        margin-bottom: 12px;
+    }
+
+    .top {
+        margin-bottom: 75px;
+    }
+
+    .top_card {
+        -ms-grid-column-span: 6;
+        grid-column: span 6;
+    }
+
+    .top_card-desc {
+        margin-bottom: 18px;
+    }
+
+    .footer_logo {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .footer_nav {
+        width: 100%;
+    }
+}
